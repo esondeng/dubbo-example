@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.eson</groupId>
+        <artifactId>inf-bom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.dubbo.eson</groupId>
+    <artifactId>dubbo-example</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>product-client</module>
+        <module>product-consumer</module>
+        <module>product-provider</module>
+    </modules>
+
+    <properties>
+        <trace.version>1.0-SNAPSHOT</trace.version>
+        <eson.commom.version>1.0-SNAPSHOT</eson.commom.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.eson</groupId>
+                <artifactId>common-web</artifactId>
+                <version>${eson.commom.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.eson</groupId>
+                <artifactId>common-excel</artifactId>
+                <version>${eson.commom.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.trace</groupId>
+                <artifactId>trace-dubbo</artifactId>
+                <version>${trace.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.trace</groupId>
+                <artifactId>trace-web</artifactId>
+                <version>${trace.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.trace</groupId>
+                <artifactId>trace-collect</artifactId>
+                <version>${trace.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>
