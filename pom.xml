@@ -56,6 +56,12 @@
                 <version>${trace.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.trace</groupId>
+                <artifactId>trace-log</artifactId>
+                <version>${trace.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>

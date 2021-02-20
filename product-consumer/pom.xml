@@ -29,6 +29,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.trace</groupId>
+            <artifactId>trace-log</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.eson</groupId>
             <artifactId>common-web</artifactId>
         </dependency>
