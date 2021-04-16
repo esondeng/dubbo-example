@@ -10,7 +10,7 @@ import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.dubbo.trace.web.filter.TraceFilter;
-import com.dubbo.trace.web.handler.TraceAppExceptionHandler;
+import com.eson.common.web.handler.AppExceptionHandler;
 
 /**
  * @author dengxiaolin
@@ -34,8 +34,8 @@ public class WebMvcConfig {
     }
 
     @Bean
-    public TraceAppExceptionHandler appExceptionHandler() {
-        return new TraceAppExceptionHandler();
+    public AppExceptionHandler appExceptionHandler() {
+        return new AppExceptionHandler();
     }
 
     @Bean(name = "multipartResolver")
