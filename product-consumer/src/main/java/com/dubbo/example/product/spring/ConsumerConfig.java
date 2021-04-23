@@ -7,8 +7,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
-import com.dubbo.trace.web.spring.TraceWebAutoConfig;
-import com.trace.collect.spring.TraceCollectAutoConfig;
+import com.dubbo.trace.web.spring.TraceWebMvcConfig;
+import com.eson.common.web.spring.CommonWebMvcConfig;
+import com.trace.collect.spring.TraceCollectConfig;
 
 
 /**
@@ -18,9 +19,9 @@ import com.trace.collect.spring.TraceCollectAutoConfig;
 @Configuration
 @EnableDubbo
 @ComponentScan({"com.dubbo.example.product"})
-@Import({WebMvcConfig.class,
-        TraceCollectAutoConfig.class,
-        TraceWebAutoConfig.class
+@Import({CommonWebMvcConfig.class,
+        TraceCollectConfig.class,
+        TraceWebMvcConfig.class
 })
 public class ConsumerConfig {
 

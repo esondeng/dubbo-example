@@ -90,8 +90,7 @@ public class ProductController {
 //        ExcelUtils.write(response, sheetWriteParams, "测试");
 
         test.test();
-        productService.sayHello();
-        return WebResponse.success("123");
+        return WebResponse.success(productService.sayHello());
 
     }
 

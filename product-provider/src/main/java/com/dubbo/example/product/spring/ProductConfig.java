@@ -11,7 +11,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import com.alibaba.nacos.spring.context.annotation.config.EnableNacosConfig;
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySources;
-import com.trace.collect.spring.TraceCollectAutoConfig;
+import com.trace.collect.spring.TraceCollectConfig;
 
 
 /**
@@ -22,7 +22,7 @@ import com.trace.collect.spring.TraceCollectAutoConfig;
 @EnableDubbo(scanBasePackages = "com.dubbo.example.product.service")
 @ComponentScan({"com.dubbo.example.product"})
 @EnableNacosConfig
-@Import({TraceCollectAutoConfig.class,
+@Import({TraceCollectConfig.class,
         JdbcConfig.class,
         MybatisConfig.class})
 @NacosPropertySources({
