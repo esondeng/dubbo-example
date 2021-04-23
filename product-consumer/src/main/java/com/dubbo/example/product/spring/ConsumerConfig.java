@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
-import com.dubbo.trace.web.spring.TraceWebMvcConfig;
 import com.eson.common.web.spring.CommonWebMvcConfig;
+import com.trace.web.spring.TraceWebMvcConfig;
 
 
 /**
