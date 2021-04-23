@@ -20,17 +20,7 @@
 
         <dependency>
             <groupId>com.trace</groupId>
-            <artifactId>trace-dubbo</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.trace</groupId>
             <artifactId>trace-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.trace</groupId>
-            <artifactId>trace-log</artifactId>
         </dependency>
 
         <dependency>

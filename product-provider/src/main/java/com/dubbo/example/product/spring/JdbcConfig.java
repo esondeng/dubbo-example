@@ -17,7 +17,7 @@ public class JdbcConfig {
 
     @ConfigurationProperties(prefix = "spring.datasource")
     @Bean
-    public DataSource dataSource() {
+    public static DataSource dataSource() {
         return new DruidDataSource();
     }
 }

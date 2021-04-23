@@ -24,11 +24,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.trace</groupId>
-            <artifactId>trace-log</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-registry-nacos</artifactId>
         </dependency>
