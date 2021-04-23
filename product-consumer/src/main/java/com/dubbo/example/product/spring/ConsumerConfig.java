@@ -9,7 +9,6 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import com.dubbo.trace.web.spring.TraceWebMvcConfig;
 import com.eson.common.web.spring.CommonWebMvcConfig;
-import com.trace.collect.spring.TraceCollectConfig;
 
 
 /**
@@ -20,7 +19,6 @@ import com.trace.collect.spring.TraceCollectConfig;
 @EnableDubbo
 @ComponentScan({"com.dubbo.example.product"})
 @Import({CommonWebMvcConfig.class,
-        TraceCollectConfig.class,
         TraceWebMvcConfig.class
 })
 public class ConsumerConfig {
