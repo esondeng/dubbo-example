@@ -1,5 +1,6 @@
 package com.dubbo.example.product;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,7 @@ import com.dubbo.example.product.spring.ProductConfig;
 @Import({
         ProductConfig.class
 })
+@MapperScan("com.dubbo.example.product.mapper")
 public class ProductApplication {
 
     public static void main(String[] args) {

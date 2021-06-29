@@ -22,9 +22,7 @@ import com.trace.collect.spring.TraceCollectConfig;
 @EnableDubbo(scanBasePackages = "com.dubbo.example.product.service")
 @ComponentScan({"com.dubbo.example.product"})
 @EnableNacosConfig
-@Import({TraceCollectConfig.class,
-        JdbcConfig.class,
-        MybatisConfig.class})
+@Import({TraceCollectConfig.class})
 @NacosPropertySources({
         @NacosPropertySource(dataId = "dubbo-provider-demo.properties", groupId = "dubbo-provider-group", autoRefreshed = true)
 })

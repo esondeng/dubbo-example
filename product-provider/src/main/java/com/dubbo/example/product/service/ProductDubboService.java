@@ -11,7 +11,7 @@ import com.dubbo.example.product.manager.ProductManager;
  * @since 2020/12/25
  */
 @DubboService
-public class ProductServiceImpl implements ProductService {
+public class ProductDubboService implements ProductService {
 
     @Autowired
     private ProductManager productManager;

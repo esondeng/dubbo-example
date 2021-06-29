@@ -21,6 +21,7 @@
 
     <properties>
         <trace.version>1.0-SNAPSHOT</trace.version>
+        <eson.mybatis.version>1.0-SNAPSHOT</eson.mybatis.version>
         <eson.commom.version>1.0-SNAPSHOT</eson.commom.version>
     </properties>
 
@@ -42,6 +43,12 @@
                 <groupId>com.trace</groupId>
                 <artifactId>trace-dubbo</artifactId>
                 <version>${trace.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.eson.mybatis</groupId>
+                <artifactId>mybatis-starter</artifactId>
+                <version>${eson.mybatis.version}</version>
             </dependency>
 
             <dependency>

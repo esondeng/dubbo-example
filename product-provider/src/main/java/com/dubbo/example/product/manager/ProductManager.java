@@ -2,6 +2,7 @@ package com.dubbo.example.product.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.support.TransactionTemplate;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.dubbo.example.product.mapper.TestMapper;
@@ -16,14 +17,14 @@ public class ProductManager {
     @Autowired
     private TestMapper testMapper;
 
+    @Autowired
+    private TransactionTemplate transactionTemplate;
+
     @NacosValue(value = "${product:123}", autoRefreshed = true)
     private String nacosAddress;
 
     public String test() {
-        testMapper.getAll();
-        int[] b= new int[0];
-        int value = b[1];
-        return String.valueOf(value);
+        return transactionTemplate.execute((status) -> testMapper.getById(1).getName());
     }
 
 }
