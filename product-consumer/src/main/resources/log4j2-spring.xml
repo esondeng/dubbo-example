@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration status="warn">
     <appenders>
-        <appender name="FileAppenderInfo" class="org.apache.log4j.DailyRollingFileAppender">
-            <param name="File" value="/opt/logs/product-consumer/product-consumer.log" />
-            <param name="Append" value="true" />
-            <param name="DatePattern" value="'.'yyyy-MM-dd-HH-mm'.log'" />
-            <layout class="org.apache.log4j.PatternLayout">
-                <param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss.SSS} %t %X{traceId} [%p] %c{1} %m%n"/>
-            </layout>
-        </appender>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="%d{yyyy/MM/dd HH:mm:ss.SSS} %t %X{traceId} [%p] %c{1} %m %n"/>
+        </Console>
 
         <!--异步日志上报远程配置示例-->
-        <Scribe name="fileAppender"/>
+        <Scribe name="ScribeAppender"/>
     </appenders>
 
     <loggers>
         <root level="INFO">
-            <appender-ref ref="FileAppenderInfo"/>
+            <appender-ref ref="Console"/>
             <appender-ref ref="ScribeAppender"/>
         </root>
     </loggers>
