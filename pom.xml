@@ -29,20 +29,8 @@
         <dependencies>
             <dependency>
                 <groupId>com.eson</groupId>
-                <artifactId>common-web</artifactId>
-                <version>${eson.commom.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.eson</groupId>
                 <artifactId>common-excel</artifactId>
                 <version>${eson.commom.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.trace</groupId>
-                <artifactId>trace-dubbo</artifactId>
-                <version>${trace.version}</version>
             </dependency>
 
             <dependency>
@@ -53,13 +41,13 @@
 
             <dependency>
                 <groupId>com.trace</groupId>
-                <artifactId>trace-web</artifactId>
+                <artifactId>trace-dubbo-starter</artifactId>
                 <version>${trace.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.trace</groupId>
-                <artifactId>trace-collect</artifactId>
+                <artifactId>trace-web-starter</artifactId>
                 <version>${trace.version}</version>
             </dependency>
 

@@ -18,9 +18,7 @@ import com.trace.web.spring.TraceWebMvcConfig;
 @Configuration
 @EnableDubbo
 @ComponentScan({"com.dubbo.example.product"})
-@Import({CommonWebMvcConfig.class,
-        TraceWebMvcConfig.class
-})
+@Import({CommonWebMvcConfig.class})
 public class ConsumerConfig {
 
     @Bean
