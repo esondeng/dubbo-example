@@ -1,12 +1,11 @@
 package com.dubbo.example.product.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.dubbo.example.product.mapper.TestMapper;
-import com.eson.common.core.exception.BusinessException;
 
 /**
  * @author dengxiaolin
@@ -20,11 +19,11 @@ public class ProductManager {
     @Autowired
     private TransactionTemplate transactionTemplate;
 
-    @NacosValue(value = "${product:123}", autoRefreshed = true)
+    @Value("${product:123}")
     private String nacosAddress;
 
     public String test() {
-        return transactionTemplate.execute((status) -> testMapper.getById(1).getName());
+        return transactionTemplate.execute((status) -> testMapper.getById(2).getName());
     }
 
 }
